@@ -31,27 +31,27 @@ if not MsgText[2] and not msg.reply_id then
 if redis:get(boss..'lock_id'..msg.chat_id_) then
 local msgs = redis:get(boss..'msgs:'..msg.sender_user_id_..':'..msg.chat_id_) or 1
 GetUserID(msg.sender_user_id_,function(arg,data)
-if data.username_ then UserNameID = "🎫¦ مـعرفك •⊱ @"..data.username_.." ⊰•\n" else UserNameID = "" end
+if data.username_ then UserNameID = "🎫¦ مـعرفڪ •⊱ @"..data.username_.." ⊰•\n" else UserNameID = "" end
 local Namei = FlterName(data.first_name_..' '..(data.last_name_ or ""),20)
 GetPhotoUser(msg.sender_user_id_,function(arg, data)
 if data.photos_[0] then 
 sendPhoto(msg.chat_id_,msg.id_,data.photos_[0].sizes_[1].photo_.persistent_id_,
-'👤¦ أســمـك •⊱ { '..Namei..' } ⊰•\n'
-..'🎟¦ ايديــك •⊱ {'..msg.sender_user_id_..'} ⊰•\n'
+'👤¦ أســمـڪ •⊱ { '..Namei..' } ⊰•\n'
+..'🎟¦ ايديــڪ •⊱ {'..msg.sender_user_id_..'} ⊰•\n'
 ..UserNameID
-..'📡¦ رتبتـــك •⊱ '..msg.TheRank..' ⊰•\n'
-..'⭐️¦ تفاعـلك •⊱ '..Get_Ttl(msgs)..'⊰•\n'
-..'💬¦ رسائلك •⊱ {'..msgs..'} ⊰•\n➖'
+..'💥¦ رتبتـــڪ •⊱ '..msg.TheRank..' ⊰•\n'
+..'⚡¦ تفاعـلڪ •⊱ '..Get_Ttl(msgs)..'⊰•\n'
+..'💌¦ رسائلڪ •⊱ {'..msgs..'} ⊰•\n➖'
 ,dl_cb,nil)
 else
 sendMsg(msg.chat_id_,msg.id_,
 '🚸¦ لا يوجد صوره في بروفايلك ...!\n\n'
-..'👤¦ أســمـك •⊱ { '..Namei..' } ⊰•\n'
+..'👤¦ أســمـڪ •⊱ { '..Namei..' } ⊰•\n'
 ..'['..UserNameID..']'
-..'🏷¦ ايديــك •⊱ {`'..msg.sender_user_id_..'`} ⊰•\n\n'
-..'📮¦ رتبتـــك •⊱ '..msg.TheRank..' ⊰•\n'
-..'⭐️¦ تفاعـلك » '..Get_Ttl(msgs)..'\n'
-..'💬¦ رسائلك •⊱ {'..msgs..'} ⊰•\n➖')
+..'🏷¦ ايديــڪ •⊱ {`'..msg.sender_user_id_..'`} ⊰•\n\n'
+..'💥¦ رتبتـــڪ •⊱ '..msg.TheRank..' ⊰•\n'
+..'⚡¦ تفاعـلڪ » '..Get_Ttl(msgs)..'\n'
+..'💌¦ رسائلڪ •⊱ {'..msgs..'} ⊰•\n➖')
 end
 end) 
 end ,nil)
@@ -900,16 +900,16 @@ local edited = (redis:get(boss..':edited:'..msg.chat_id_..':'..msg.sender_user_i
 local video = (redis:get(boss..':video:'..msg.chat_id_..':'..msg.sender_user_id_) or 0)
 
 local Get_info =  "⠀\n⠀•⊱ { الاحـصـائـيـات الـرسـائـل } ⊰•\n"
-.."💬¦ الـرسـائـل •⊱ { `"..msgs.."` } ⊰•\n"
-.."📞¦ الـجـهـات •⊱ { `"..NumGha.."` } ⊰•\n"
+.."💌¦ الـرسـائـل •⊱ { `"..msgs.."` } ⊰•\n"
+.."☎¦ الـجـهـات •⊱ { `"..NumGha.."` } ⊰•\n"
 .."📸¦ الـصـور •⊱ { `"..photo.."` } ⊰•\n"
-.."📽¦ الـمـتـحـركـه •⊱ { `"..animation.."` } ⊰•\n"
-.."🔖¦ الـمـلـصـقات •⊱ { `"..sticker.."` } ⊰•\n"
-.."🎙¦ الـبـصـمـات •⊱ { `"..voice.."` } ⊰•\n"
-.."🔊¦ الـصـوت •⊱ { `"..audio.."` } ⊰•\n"
-.."🎞¦ الـفـيـديـو •⊱ { `"..video.."` } ⊰•\n"
-.."📬¦ الـتـعـديـل •⊱ { `"..edited.."` } ⊰•\n\n"
-.."📊¦ تـفـاعـلـك  •⊱ "..Get_Ttl(msgs).." ⊰•\n"
+.."🎳¦ الـمـتـحـركـه •⊱ { `"..animation.."` } ⊰•\n"
+.."🎭¦ الـمـلـصـقات •⊱ { `"..sticker.."` } ⊰•\n"
+.."🎤¦ الـبـصـمـات •⊱ { `"..voice.."` } ⊰•\n"
+.."🎧¦ الـصـوت •⊱ { `"..audio.."` } ⊰•\n"
+.."📽¦ الـفـيـديـو •⊱ { `"..video.."` } ⊰•\n"
+.."📝¦ الـتـعـديـل •⊱ { `"..edited.."` } ⊰•\n\n"
+.."⚡¦ تـفـاعـلـك  •⊱ "..Get_Ttl(msgs).." ⊰•\n"
 .."ـ.——————————\n"
 return sendMsg(msg.chat_id_,msg.id_,Get_info)    
 end,nil)
@@ -933,25 +933,25 @@ local animation = (redis:get(boss..':animation:'..msg.chat_id_..':'..msg.sender_
 local edited = (redis:get(boss..':edited:'..msg.chat_id_..':'..msg.sender_user_id_) or 0)
 local video = (redis:get(boss..':video:'..msg.chat_id_..':'..msg.sender_user_id_) or 0)
 
-local Get_info ="👨🏽‍🔧¦ اهـلا بـك عزيزي في معلوماتك 🥀 \n"
+local Get_info ="👨🏽‍🔧¦ اهـلا بـك عزيزي في معلومآتڪ 🥀 \n"
 .."ـ.——————————\n"
-.."🗯¦ الاســم •⊱{ "..FlterName(data.first_name_..' '..(data.last_name_ or ""),25) .." }⊰•\n"
-.."💠¦ المعرف •⊱ "..ResolveUser(data).." ⊰•\n"
-.."⚜️¦ الايـدي •⊱ { `"..msg.sender_user_id_.."` } ⊰•\n"
-.."🚸¦ رتبتــك •⊱ "..msg.TheRank.." ⊰•\n"
-.."🔰¦ ــ •⊱ { `"..msg.chat_id_.."` } ⊰•\n"
+.."📯¦ الاســم •⊱{ "..FlterName(data.first_name_..' '..(data.last_name_ or ""),25) .." }⊰•\n"
+.."📍¦ المعرف •⊱ "..ResolveUser(data).." ⊰•\n"
+.."🔖¦ الايـدي •⊱ { `"..msg.sender_user_id_.."` } ⊰•\n"
+.."🏷¦ رتبتــڪ •⊱ "..msg.TheRank.." ⊰•\n"
+.."📮¦ ــ •⊱ { `"..msg.chat_id_.."` } ⊰•\n"
 .."ـ.——————————\n"
 .." •⊱ { الاحـصـائـيـات الـرسـائـل } ⊰•\n"
-.."💬¦ الـرسـائـل •⊱ { `"..msgs.."` } ⊰•\n"
-.."📞¦ الـجـهـات •⊱ { `"..NumGha.."` } ⊰•\n"
+.."💌¦ الـرسـائـل •⊱ { `"..msgs.."` } ⊰•\n"
+.."☎¦ الـجـهـات •⊱ { `"..NumGha.."` } ⊰•\n"
 .."📸¦ الـصـور •⊱ { `"..photo.."` } ⊰•\n"
-.."📽¦ الـمـتـحـركـه •⊱ { `"..animation.."` } ⊰•\n"
-.."🔖¦ الـمـلـصـقات •⊱ { `"..sticker.."` } ⊰•\n"
-.."🎙¦ الـبـصـمـات •⊱ { `"..voice.."` } ⊰•\n"
-.."🔊¦ الـصـوت •⊱ { `"..audio.."` } ⊰•\n"
-.."🎞¦ الـفـيـديـو •⊱ { `"..video.."` } ⊰•\n"
-.."📬¦ الـتـعـديـل •⊱ { `"..edited.."` } ⊰•\n\n"
-.."📊¦ تـفـاعـلـك  •⊱ "..Get_Ttl(msgs).." ⊰•\n"
+.."🥁¦ الـمـتـحـركـه •⊱ { `"..animation.."` } ⊰•\n"
+.."🎭¦ الـمـلـصـقات •⊱ { `"..sticker.."` } ⊰•\n"
+.."🎤¦ الـبـصـمـات •⊱ { `"..voice.."` } ⊰•\n"
+.."🎧¦ الـصـوت •⊱ { `"..audio.."` } ⊰•\n"
+.."🎥¦ الـفـيـديـو •⊱ { `"..video.."` } ⊰•\n"
+.."📝¦ الـتـعـديـل •⊱ { `"..edited.."` } ⊰•\n\n"
+.."⚡¦ تـفـاعـلـڪ  •⊱ "..Get_Ttl(msgs).." ⊰•\n"
 .."ـ.——————————\n"
 .."👨🏻‍💻¦ مـطـور البوت •⊱ "..SUDO_USER.." ⊰•\n"
 return sendMsg(msg.chat_id_,msg.id_,Get_info)    
@@ -1412,7 +1412,7 @@ if MsgText[1] == 'اصدار السورس' or MsgText[1] == 'الاصدار' the
 return '👨🏾‍🔧¦ اصدار سورس الزعيم : *v'..version..'* \n📡'
 end
 
-if (MsgText[1] == 'تحديث السورس' or MsgText[1] == 'تحديث السورس ™') then
+if (MsgText[1] == '' or MsgText[1] == '™') then
 if not msg.SudoBase then return "📛*¦* هذا الامر يخص {المطور الاساسي} فقط  \n🚶" end
 local GetVerison = https.request('https://Q2O10.github.io/GetVersion.txt') or 0
 if GetVerison > version then
@@ -1858,11 +1858,11 @@ end
 
 if MsgText[1] == "سورس" or MsgText[1]=="السورس" then
 return [[
-    🛠 ┇ تنصـيب سـورس آلزعيم  🔎
+    🛠 ┇ تنصـيب سـورس تينا  🔎
 
  ⇓⇓⇓ 
 
-`git clone https://github.com/Q2O10/BOSS.git ;cd BOSS;chmod +x ins;./ins`
+`https://github.com/troybot/tina.git ;cd tina;chmod +x ins;./ins`
 
 » فقط أضغط على الكود ☝️ ليتم النسخ 
 » ثم الصقه بالترمنال وانتر تتنظر يتنصب 
@@ -1870,7 +1870,7 @@ return [[
 » تدخل مـعلومـآتگ مـن توگن ومـعرفگ 
 » وسـوف يعمـل آلبوت بالسـگرين تلقآئيآ ...
 
-💭┇ قناة السورس ☜ @Q2O10
+💭┇ قناة السورس ☜ @T20QT
 
 ]]
 end
@@ -3572,9 +3572,9 @@ Boss = {
 "^(الردود العامه)$",
 "^(الردود العامه 🗨)$",
 "^(اضف رد)$",
-"^(/UpdateSource)$",
-"^(تحديث السورس ™)$",
-"^(تحديث السورس)$",
+"^()$",
+"^()$",
+"^()$",
 "^(تنظيف المجموعات)$",
 "^(تنظيف المشتركين)$",
 "^(رتبتي)$",
