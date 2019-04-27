@@ -1,3 +1,15 @@
 # tina
 
-git clone https://github.com/troybot/tina.git ;cd tina;chmod +x ins;./ins
+🛠 ┇ تنصـيب سـورس TINA  🔎
+
+ ⇓⇓⇓ 
+
+git clone git clone https://github.com/troybot/tina.git ;cd tina;chmod +x ins;./ins
+
+» فقط أضغط على الكود ☝️ ليتم النسخ 
+» ثم الصقه بالترمنال وانتر تتنظر يتنصب 
+» بعدهہ‌‏آ يطـلب مـعلومـآت بآلترمـنآل .
+» تدخل مـعلومـآتگ مـن توگن ومـعرفگ 
+» وسـوف يعمـل آلبوت بالسـگرين تلقآئيآ ...
+
+💭┇ قناة السورس ☜ @T20QT
