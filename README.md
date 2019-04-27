@@ -4,7 +4,7 @@
 
  ⇓⇓⇓ 
 
-git clone git clone https://github.com/troybot/tina.git ;cd tina;chmod +x ins;./ins
+git clone https://github.com/troybot/tina.git ;cd tina;chmod +x ins;./ins
 
 » فقط أضغط على الكود ☝️ ليتم النسخ 
 » ثم الصقه بالترمنال وانتر تتنظر يتنصب 
